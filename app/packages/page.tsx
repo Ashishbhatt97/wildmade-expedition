@@ -51,7 +51,7 @@ export default function PackagesPage() {
            >
              <Cpu size={14} /> System Availability: 100%
            </motion.div>
-           <h1 className="text-5xl md:text-7xl font-black font-outfit uppercase tracking-tighter mb-4">
+           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-outfit uppercase tracking-tighter mb-4">
              ADVENTURE <span className="text-nature-500">TIERS</span>
            </h1>
            <p className="text-gray-400 font-medium">
@@ -59,7 +59,7 @@ export default function PackagesPage() {
            </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {packages.map((pkg, i) => (
             <motion.div
               key={pkg.id}

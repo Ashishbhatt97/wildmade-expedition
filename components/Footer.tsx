@@ -35,7 +35,7 @@ export default function Footer() {
                 <Sparkles className="text-nature-accent" size={20} />
               </div>
               <span className="font-outfit text-2xl font-black uppercase tracking-tighter">
-                Venture<span className="text-nature-accent italic">Neo</span>
+                Wildmade<span className="text-nature-accent italic">Expedition</span>
               </span>
             </Link>
             <p className="text-gray-500 font-medium text-base mb-10 leading-relaxed">
@@ -106,7 +106,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-nature-accent animate-ping" />
                 <p className="text-[10px] font-black text-gray-600 uppercase tracking-[0.4em]">
-                    © {new Date().getFullYear()} VENTURE_NEO // ALL_SYSTEMS_GO
+                    © {new Date().getFullYear()} WILDMADE_EXPEDITION // ALL_SYSTEMS_GO
                 </p>
             </div>
             <div className="flex gap-10">

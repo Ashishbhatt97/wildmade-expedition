@@ -40,16 +40,16 @@ export default function Navbar() {
             <Sparkles className="text-nature-900" size={20} />
           </motion.div>
           <div className="flex flex-col leading-none">
-            <span className="font-outfit text-2xl font-black uppercase tracking-tighter text-white">
-                Venture<span className="text-nature-accent italic">Neo</span>
+            <span className="font-outfit text-xl lg:text-2xl font-black uppercase tracking-tighter text-white">
+                Wildmade<span className="text-nature-accent italic">Expedition</span>
             </span>
             <span className="text-[8px] font-black tracking-[0.4em] text-nature-accent/50 group-hover:text-nature-accent transition-colors">ADVENTURE_PROTOCOL</span>
           </div>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-12">
-            <ul className="flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+            <ul className="flex items-center gap-6 xl:gap-10">
             {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -71,14 +71,14 @@ export default function Navbar() {
             })}
             </ul>
 
-            <Link href="/contact" className="btn-futuristic px-8 py-3 text-xs tracking-widest leading-none flex items-center gap-2 group">
+            <Link href="/contact" className="btn-futuristic px-6 xl:px-8 py-3 text-xs tracking-widest leading-none flex items-center gap-2 group whitespace-nowrap">
                 INIT_SYNC <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-nature-accent transition-colors"
+          className="lg:hidden w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-nature-accent transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,12 +93,12 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             exit={{ opacity: 0, scale: 0.95, filter: 'blur(10px)' }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[1100] bg-nature-900/95 backdrop-blur-3xl flex flex-col p-10 md:hidden"
+            className="fixed inset-0 z-[1100] bg-nature-900/95 backdrop-blur-3xl flex flex-col p-10 lg:hidden"
           >
             <div className="flex items-center justify-between mb-20">
                 <div className="flex items-center gap-3">
                     <Sparkles className="text-nature-accent" size={24} />
-                    <span className="font-outfit text-xl font-bold uppercase tracking-tighter">VentureNeo</span>
+                    <span className="font-outfit text-xl font-bold uppercase tracking-tighter">Wildmade Expedition</span>
                 </div>
                 <button 
                     className="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center hover:border-nature-accent"

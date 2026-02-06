@@ -43,7 +43,7 @@ const ServiceSection = ({ title, subtitle, desc, image, icon: Icon, index, stats
             <span className="text-xs font-black uppercase tracking-[0.4em]">{subtitle}</span>
           </div>
           
-          <h2 className="text-6xl md:text-8xl font-black font-outfit uppercase tracking-tighter mb-8 leading-[0.85]">
+          <h2 className="text-5xl md:text-6xl lg:text-8xl font-black font-outfit uppercase tracking-tighter mb-8 leading-[0.85]">
             {title.split(' ')[0]} <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-nature-accent to-emerald-400 italic">
                 {title.split(' ').slice(1).join(' ')}
@@ -117,7 +117,12 @@ export default function Home() {
   return (
     <div className="bg-nature-900">
       {/* HERO SECTION */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen lg:h-screen flex items-center justify-center overflow-hidden py-24 md:py-0">
+        {/* Wildmade Branding Background Element */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] md:text-[25vw] font-black text-white/[0.02] select-none pointer-events-none z-0 tracking-tighter uppercase whitespace-nowrap">
+            WILDMADE
+        </div>
+
         <motion.div style={{ y: heroY, opacity: heroOpacity, scale: heroScale }} className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=100&w=2574&auto=format&fit=crop"
@@ -141,12 +146,12 @@ export default function Home() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-nature-accent text-[10px] font-black uppercase tracking-[0.5em] mb-12 shadow-2xl backdrop-blur-md"
+                  className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 rounded-full bg-white/5 border border-white/10 text-nature-accent text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] mb-8 md:mb-12 shadow-2xl backdrop-blur-md"
                 >
                   <Sparkles size={16} className="animate-spin-slow" /> CAMPING, RAFTING & ADVENTUROUS TOURS
                 </motion.div>
 
-                <h1 className="text-7xl md:text-[11rem] font-black font-outfit uppercase tracking-tighter leading-[0.8] mb-10 flex flex-col">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] 1440p:text-[10rem] 2xl:text-[11rem] font-black font-outfit uppercase tracking-tighter leading-[0.8] mb-10 flex flex-col">
                   <span className="inline-block overflow-hidden h-fit py-2">
                     <motion.span 
                         initial={{ y: "100%" }}
@@ -154,7 +159,7 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.5 }}
                         className="inline-block"
                     >
-                        ADVENTURE
+                        WILDMADE
                     </motion.span>
                   </span>
                   <span className="inline-block overflow-hidden h-fit py-2">
@@ -164,7 +169,7 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.7 }}
                         className="text-transparent bg-clip-text bg-gradient-to-r from-nature-accent via-emerald-400 to-nature-500 italic block"
                     >
-                        UNLEASHED
+                        EXPEDITION
                     </motion.span>
                   </span>
                 </h1>
@@ -173,11 +178,11 @@ export default function Home() {
                   Master the elements of <span className="text-white font-bold underline decoration-nature-accent decoration-2 underline-offset-4">Rafting</span>, <span className="text-white font-bold underline decoration-nature-accent decoration-2 underline-offset-4">Camping</span>, and <span className="text-white font-bold underline decoration-nature-accent decoration-2 underline-offset-4">Trekking</span> with next-gen bio-integrated tech.
                 </p>
 
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 opacity-0 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:forwards]">
-                  <Link href="/booking" className="btn-futuristic px-16 py-6 text-lg font-black tracking-[0.2em] shadow-[0_0_30px_rgba(173,255,47,0.3)]">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 opacity-0 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:forwards]">
+                  <Link href="/contact" className="btn-futuristic w-full sm:w-auto px-10 md:px-16 py-4 md:py-6 text-base md:text-lg font-black tracking-[0.2em] flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(173,255,47,0.3)]">
                     INITIALIZE SYNC
                   </Link>
-                  <Link href="#explore" className="group flex items-center gap-3 text-sm font-black uppercase tracking-[0.3em] hover:text-nature-accent transition-colors">
+                  <Link href="#explore" className="group flex items-center gap-3 text-xs md:text-sm font-black uppercase tracking-[0.3em] hover:text-nature-accent transition-colors">
                     EXPLORE_TOURS <div className="w-12 h-[1px] bg-white/20 group-hover:w-20 group-hover:bg-nature-accent transition-all duration-500" />
                   </Link>
                 </div>
@@ -244,7 +249,7 @@ export default function Home() {
                    <p className="text-gray-400 font-medium">Why we are the primary selection for 21st-century exploration.</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                   {[
                       { icon: Shield, title: "SAFETY_01", desc: "Redundant AI-monitored life support layers." },
                       { icon: Wind, title: "ECO_SYNC", desc: "Carbon-negative footprint on every mission." },
@@ -278,11 +283,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
               >
-                  <h2 className="text-7xl md:text-[10rem] font-black font-outfit uppercase tracking-tighter leading-[0.8] mb-12">
+                  <h2 className="text-5xl md:text-7xl lg:text-[10rem] font-black font-outfit uppercase tracking-tighter leading-[0.8] mb-12">
                       LEAVE THE <br/><span className="text-nature-accent italic">ORDINARY</span>
                   </h2>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                      <Link href="/contact" className="btn-futuristic px-16 py-6 text-xl tracking-[0.3em] font-black group">
+                      <Link href="/contact" className="btn-futuristic px-16 py-6 text-xl tracking-[0.3em] font-black group flex items-center justify-center gap-4">
                         SYNC NOW <ChevronRight className="group-hover:translate-x-2 transition-transform" />
                       </Link>
                       <Link href="/about" className="text-xs font-black uppercase tracking-[0.5em] text-gray-400 hover:text-white transition-colors">

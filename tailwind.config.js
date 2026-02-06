@@ -28,6 +28,10 @@ module.exports = {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'futuristic-green': 'linear-gradient(180deg, #051C12 0%, #020617 100%)',
+            },
+            screens: {
+                '1440p': '1440px',
+                '3xl': '1920px',
             }
         },
     },

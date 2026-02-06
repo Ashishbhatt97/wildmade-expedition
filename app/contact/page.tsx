@@ -38,7 +38,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-2 text-nature-accent mb-6 animate-pulse">
                 <Radio size={20} /> <span className="text-xs font-black uppercase tracking-widest">Live Uplink Estabilished</span>
             </div>
-            <h1 className="text-7xl md:text-9xl font-black font-outfit uppercase tracking-tighter leading-none mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black font-outfit uppercase tracking-tighter leading-none mb-8">
                 OPEN <br/><span className="text-nature-accent italic">LINK</span>
             </h1>
             <p className="text-xl text-gray-400 font-medium mb-12 max-w-lg">
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                    <h4 className="font-black font-outfit uppercase text-sm mb-1">Neural Mail</h4>
-                   <p className="text-gray-500 font-medium">tours@ventureneo.io</p>
+                   <p className="text-gray-500 font-medium">tours@wildmadeexpedition.io</p>
                 </div>
               </div>
             </div>

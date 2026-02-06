@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VentureNeo | Future of Exploration",
+  title: "Wildmade Expedition | Future of Exploration",
   description: "Experience nature through bio-integrated protocols. Trekking, camping, and rafting redefined for the next generation.",
-  keywords: "futuristic, adventure, trekking, camping, rafting, neon, greenery, travel",
+  keywords: "wildmade, expedition, futuristic, adventure, trekking, camping, rafting, neon, greenery, travel",
 };
 
 import SmoothScroll from "@/components/SmoothScroll";
