@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nature-900: #051C12;
+  --color-nature-800: #062C1D;
+  --color-nature-700: #064E3B;
+  --color-nature-600: #059669;
+  --color-nature-500: #10B981;
+  --color-nature-400: #34D399;
+  --color-nature-accent: #ADFF2F; /* Neon Lime */
+
+  --font-sans: var(--font-inter);
+  --font-outfit: var(--font-outfit);
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-fade-in-up: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --bg-nature: #051C12;
+  --bg-deep: #020617;
+  --accent-green: #10B981;
+  --glow-lime: #ADFF2F;
+}
+
+@layer base {
+  body {
+    @apply bg-nature-900 text-white font-sans antialiased;
+    background-image: radial-gradient(circle at 50% 0%, #051C12 0%, #020617 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .futuristic-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 transition-all duration-500;
+  }
+  
+  .futuristic-card:hover {
+    @apply border-nature-accent/40 bg-white/10 shadow-[0_0_30px_rgba(173,255,47,0.1)];
+    transform: translateY(-5px);
+  }
+
+  .btn-futuristic {
+    @apply relative overflow-hidden rounded-2xl font-black transition-all duration-500 active:scale-95 text-nature-900;
+    background: linear-gradient(90deg, #ADFF2F, #10B981);
+  }
+
+  .btn-futuristic::after {
+    content: '';
+    @apply absolute inset-0 bg-white opacity-0 transition-opacity duration-500;
+  }
+
+  .btn-futuristic:hover::after {
+    @apply opacity-20;
+  }
+
+  .btn-futuristic:hover {
+    @apply shadow-[0_0_40px_rgba(173,255,47,0.4)];
+  }
+
+  .glass-nav {
+    @apply bg-black/60 backdrop-blur-2xl border-b border-white/5;
+  }
+
+  .container {
+    @apply mx-auto px-6 max-w-7xl;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+/* Lenis Smooth Scroll Integration */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-nature-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-nature-accent/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-nature-accent/40;
+}
