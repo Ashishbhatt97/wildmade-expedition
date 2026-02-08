@@ -18,6 +18,7 @@ import {
   Layers,
   Activity
 } from 'lucide-react';
+import HeroCarousel from '@/components/HeroCarousel';
 
 const ServiceSection = ({ title, subtitle, desc, image, icon: Icon, index, stats }: any) => {
   const ref = useRef(null);
@@ -124,15 +125,7 @@ export default function Home() {
         </div>
 
         <motion.div style={{ y: heroY, opacity: heroOpacity, scale: heroScale }} className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=100&w=2574&auto=format&fit=crop"
-            alt="Futuristic Wilderness"
-            fill
-            className="object-cover opacity-60 brightness-75 transition-all duration-1000"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-nature-900/40 to-nature-900" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
+          <HeroCarousel />
         </motion.div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -180,7 +173,7 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 opacity-0 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:forwards]">
                   <Link href="/contact" className="btn-futuristic w-full sm:w-auto px-10 md:px-16 py-4 md:py-6 text-base md:text-lg font-black tracking-[0.2em] flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(173,255,47,0.3)]">
-                    INITIALIZE SYNC
+                    BOOK NOW
                   </Link>
                   <Link href="#explore" className="group flex items-center gap-3 text-xs md:text-sm font-black uppercase tracking-[0.3em] hover:text-nature-accent transition-colors">
                     EXPLORE_TOURS <div className="w-12 h-[1px] bg-white/20 group-hover:w-20 group-hover:bg-nature-accent transition-all duration-500" />
@@ -230,7 +223,7 @@ export default function Home() {
           title="NEO CAMPING"
           subtitle="HABITAT_IMMERSION"
           desc="Sleep in habitats that breathe with you. Self-regulating climate pods integrated into the wild, providing safety and total sensory immersion."
-          image="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=100&w=1200"
+          image="https://plus.unsplash.com/premium_photo-1661916911093-b2e5f005938f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           icon={Tent}
           stats={[
             { label: 'IMMERSION', value: 'CORE_SYNC' },
